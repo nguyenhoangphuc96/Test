@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorWhite"
+        android:weightSum="100"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_weight="45"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/info_detail_textview_paddingleft">
+                <TextView
+                    android:id="@+id/tvExhibitName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Trống đồng Đông Sơn"
+                    android:textAppearance="@style/TextTitleDetailBlue"
+                    android:gravity="center|start"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100">
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:paddingLeft="@dimen/info_detail_textview_paddingleft"
+                android:layout_weight="60"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_weight="35"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            cardview:cardCornerRadius="@dimen/cardview_corner_radius"
+                            >
+                            <ImageView
+                                android:id="@+id/imgExhibitDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+
+                                android:src="@drawable/img_no_image" />
+                        </android.support.v7.widget.CardView>
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:indeterminateDrawable="@drawable/my_progress"
+                            style="@style/CustomProgressDialog"
+                            android:visibility="gone"/>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="65"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+                        android:id="@+id/horizontal_cycle_mini"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+                        app:icvp_scroll_duration="3000"
+                        app:icvp_center_page_scale_offset="30dp"
+                        app:icvp_min_page_scale_offset="@dimen/paddingverhicle_border_button_bluelight"
+                        app:icvp_max_page_scale="0.8"
+                        app:icvp_min_page_scale="0.6"
+                        app:icvp_medium_scaled="false"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loại hiện vật: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:paddingVertical="@dimen/paddingverhicle_border_button_bluelight"
+                        android:background="@drawable/border_text_detail_gray"
+                        android:id="@+id/tvMaterialName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.."
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chất liệu: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:paddingVertical="@dimen/paddingverhicle_border_button_bluelight"
+                        android:background="@drawable/border_text_detail_gray"
+                        android:id="@+id/tvStuff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.."
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số lượng: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:id="@+id/tvNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.."
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lĩnh vực: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:id="@+id/tvField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.."
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số kiểm kê: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:id="@+id/tvCodeID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.. "
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_weight="30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên gọi khác: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:id="@+id/tvOtherName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.."
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thành phần: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:id="@+id/tvElement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.. "
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/info_detail_textview_paddingleft">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mô tả: "
+                        android:textAppearance="@style/TextListInfoDetailGray"/>
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updating.. "
+                        android:textAppearance="@style/TextListInfoDetailBlack"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
